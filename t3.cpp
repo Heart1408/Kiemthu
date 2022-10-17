@@ -39,7 +39,7 @@ void output(Product P[]) {
 	cout << "\n Nhap so thu tu de mua hang: ";
 	cin >> n;
 	
-	if (n < 0 || n > 4) {
+	if (n < 1 || n > 4) {
 		throw "\n Ma san pham khong hop le!";
 	} else if ( P[n-1].getAmount() == 0) {
 		throw "\n San pham dang tam het hang.";
@@ -59,7 +59,7 @@ int main() {
   
   cout << "Danh sach san pham:";
   for (int i = 0 ; i< 4; i++) {
-  	cout << "\n" << i << ". " << P[i].getName();
+  	cout << "\n" << i + 1 << ". " << P[i].getName() << ", " << P[i].getPrice();
   }
   
   try {
